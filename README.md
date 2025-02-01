@@ -36,7 +36,7 @@ function setup() {
   createCanvas(600, 400);
   background(240);
 
-  // Slider for brush size
+  '' Slider for brush size
   createP('Brush Size:').position(10, 10);
   sliderSize = createSlider(10, 100, 20);
   sliderSize.position(100, 20);
