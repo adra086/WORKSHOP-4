@@ -32,6 +32,7 @@ This project creates an interactive painting canvas using dynamic user inputs in
 ## Code Explanation
 ### 1. Setting Up the Canvas and User Inputs
 
+```javascript
 function setup() {
   createCanvas(600, 400);
   background(240);
@@ -65,9 +66,11 @@ function setup() {
   sizeMedium = createCheckbox('Medium (30px)', true).position(260, 190).changed(deselectOtherSizes); // Default size
   sizeLarge = createCheckbox('Large (50px)', false).position(400, 190).changed(deselectOtherSizes);
 }
+```
 
 ### 2. Drawing Shapes and Text with Dynamic Properties
 
+```javascript
 function draw() {
   let size = sliderSize.value();
   setBrushColor();  // Determine brush color dynamically
@@ -103,9 +106,11 @@ function draw() {
     text(currentText, mouseX, mouseY);
   }
 }
+```
 
 ### 3. Dynamic Selection of Fonts, Colors, and Text Sizes
 
+```javascript
 // Determine the brush color based on user-selected checkboxes
 function setBrushColor() {
   if (checkboxRandom.checked()) {
@@ -142,12 +147,32 @@ function getTextSize() {
     return 30;  // Default size
   }
 }
+```
 
 ## Project Screenshots
 
     1. Initial canvas with checkboxes and input options
+    ![image](https://github.com/user-attachments/assets/4329f162-a1ec-456d-84b7-852af24e6f2d)
+    
     2. Example with shapes and text using different fonts and sizes
+    ![image](https://github.com/user-attachments/assets/5dcf9662-a7ec-4b8b-aabb-702f7e0b12d9)
+    - This example uses the word 'text' in red colour and Arial Font 
+    ![image](https://github.com/user-attachments/assets/ca278a3f-5017-4057-8ad7-23828c862ffc)
+    - This example uses the word 'text' in blue colour and Courier New Font
+    ![image](https://github.com/user-attachments/assets/cce305c9-612a-4e5a-b494-0675f8d36a60)
+    - This example uses the word 'text' at Large text size, with random colours in Georgia Font. 
+    ![image](https://github.com/user-attachments/assets/6bd8383b-a35a-4688-a8f6-300c6a2a5512)
+    - This example uses Triangles with random brush colours.
+    ![image](https://github.com/user-attachments/assets/f6e35466-ed89-4f54-aa22-4a8e4c487cd9)
+    - This example uses Rectangles that are green.
+    ![image](https://github.com/user-attachments/assets/c3c6bd9c-1057-40a7-b9ce-515571e9418f)
+    - This example uses Circles that are blue.
+    
     3. Transparency effects with shapes and text
+    These examples show the decrease and increase transparency effect on text and shapes: 
+    ![image](https://github.com/user-attachments/assets/e0d16f2e-73f9-4e03-a0bb-b3ab49541428)
+    ![image](https://github.com/user-attachments/assets/806d47a1-f3e5-40e3-931d-8dcc08af1c1f)
+   
 
 ## Problem-Solving and Feedback
 ### Issues Encountered
